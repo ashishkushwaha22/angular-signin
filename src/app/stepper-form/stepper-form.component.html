@@ -1,0 +1,91 @@
+<div class="container-fluid">
+    <div>
+        <h1>HEADER</h1>
+
+    </div>
+
+    <div style="text-align: center">
+        <h2>Stepper Form</h2>
+
+        <mat-horizontal-stepper>
+            <mat-step label="Academic Details" [stepControl]="academicDetailsForm">
+
+                <div class="step-container">
+
+                    <div class="step">
+                        <form [formGroup]="academicDetailsForm">
+                            <ng-template matStepLabel>Academic Details</ng-template>
+
+                            <div class="step1-container">
+                                <mat-form-field>
+                                    <mat-label>Country</mat-label>
+                                    <mat-select>
+                                      <mat-option *ngFor="let co of country" [value]="co">
+                                        {{co}}
+                                      </mat-option>
+                                    </mat-select>
+                                  </mat-form-field>
+    
+                                  <mat-form-field>
+                                    <mat-label>Syllabus</mat-label>
+                                    <mat-select>
+                                        <mat-option *ngFor="let co of country" [value]="co">
+                                            {{co}}
+                                          </mat-option>
+                                    </mat-select>
+                                  </mat-form-field>
+    
+                                  <mat-form-field>
+                                    <mat-label>Grade</mat-label>
+                                    <mat-select>
+                                        <mat-option *ngFor="let co of country" [value]="co">
+                                            {{co}}
+                                          </mat-option>
+                                    </mat-select>
+                                  </mat-form-field>
+                            </div>
+
+                            <div>
+                                <button class="btn btn-primary" matStepperNext>Next</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </mat-step>
+            <mat-step label="Payment">
+
+                <div>
+                    <h3>Payment Screen from Razor Pay</h3>
+                </div>
+
+                <div class="button-container">
+                    <div>
+                        <button class="btn btn-secondary" matStepperPrevious>Back</button>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-primary" matStepperNext>Next</button>
+                    </div>
+                </div>
+
+
+            </mat-step>
+            <mat-step label="Shipping Address">
+
+                <div class="button-container">
+                    <button class="btn btn-secondary" matStepperPrevious>Back</button>
+                    <button mat-button class="btn btn-success" (click)="submit()">Submit</button>
+                </div>
+
+            </mat-step>
+        </mat-horizontal-stepper>
+    </div>
+
+
+    <div>
+        <h1>FOOTER</h1>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+.container-fluid {
+    max-width: 80%;
+}
+
+.step-container {
+    display: flex;
+    justify-content: center;
+}
+
+.step {
+    max-width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-container {
+    
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 30px;
+}
+
+mat-form-field {
+    margin: 30px;
+}
